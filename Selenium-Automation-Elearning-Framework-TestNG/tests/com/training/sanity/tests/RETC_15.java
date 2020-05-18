@@ -60,9 +60,7 @@ public class RETC_15 {
 	public void validLoginTest() throws Exception {
 		//login//
 		loginPOM.clickLoginorregister();
-		System.out.println("Username:");
-		Scanner User = new Scanner(System.in);
-		String Username = User.nextLine();
+		
 		loginPOM.userName.sendKeys(Username);
 				System.out.println("Password:");
 		Scanner PWD = new Scanner(System.in);

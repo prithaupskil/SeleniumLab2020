@@ -71,17 +71,45 @@ public class ScreenShot {
 		// 1. create file 
 		// 2. capture screenshot from selenium 
 		// 3. store it in physical driver 
+		GregorianCalendar calendar = new GregorianCalendar(); 
+        int date =  calendar.get(Calendar.DATE);
+        int month =  calendar.get(Calendar.MONTH);
+        int hour =  calendar.get(Calendar.HOUR); 
+        int minute = calendar.get(Calendar.MINUTE);
+        int second = calendar.get(Calendar.SECOND); 
+        fileName = new Integer(date).toString()+"-"+new Integer(month).toString()+"-"+new Integer(hour).toString() +"-" + new Integer(minute).toString() +"-"+new Integer(second).toString() +fileName; 
+    
+        try {
+            TakesScreenshot takeScreenShot = (TakesScreenshot) driver;
+            File file = takeScreenShot.getScreenshotAs(OutputType.FILE);
+            FileUtils.copyFile(file, new File(path + fileName + ".png"));
+        } catch (WebDriverException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 		
-		try {
+		/*try {
 			TakesScreenshot takeScreenShot  = (TakesScreenshot) driver; 
 			File file = takeScreenShot.getScreenshotAs(OutputType.FILE);
+			GregorianCalendar calendar = new GregorianCalendar(); 
+			
+			int date =  calendar.get(Calendar.DATE); 
+			int minute = calendar.get(Calendar.MINUTE);
+			int second = calendar.get(Calendar.SECOND); 
+			
+			
+			fileName = new Integer(date).toString() + "-" + new Integer(minute).toString() +"-" +
+						new Integer(second).toString() +".png"; 
+			
 			
 			FileUtils.copyFile(file, new File(path +fileName+".png"));
 		} catch (WebDriverException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
+		}*/
 		
 		
 	}
