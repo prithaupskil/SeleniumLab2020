@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" parallel="none">
   <test name="Default test(failed)" parallel="none">
     <classes>
-      <class name="com.training.sanity.tests.LoginTC43">
+      <class name="com.training.sanity.tests.RETC_44_Table">
         <methods>
+          <include name="setUp"/>
           <include name="tearDown"/>
           <include name="validLoginTest"/>
-          <include name="setUp"/>
           <include name="setUpBeforeClass"/>
         </methods>
-      </class> <!-- com.training.sanity.tests.LoginTC43 -->
+      </class> <!-- com.training.sanity.tests.RETC_44_Table -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

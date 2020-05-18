@@ -12,17 +12,17 @@ public class publishpropPOM {
 		PageFactory.initElements(driver, this);
 	}
 		
-		@FindBy(xpath="//div[@class='property-title']")
+		//@FindBy(xpath="//div[@class='property-title']")
 		public WebElement publishtitle; 
 		
-		@FindBy(xpath="//h2[contains(text(),'testtest')]")
+		//@FindBy(xpath="//h2[contains(text(),'testtest')]")
 		public WebElement Title;
 		
 		@FindBy(xpath="//h3[@class='desc-headline']")
 		public WebElement publishoverview; 
 		
-		@FindBy(xpath="//p[contains(text(),'test43')]")
-		public WebElement overview;		
+		@FindBy(xpath="//div[@class='property-description print-only']//p")
+		public WebElement content;		
 		
 
 }

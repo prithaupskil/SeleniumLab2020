@@ -38,6 +38,11 @@ public WebElement propertylink;
 @FindBy(xpath="//li[@id='menu-posts-property']//ul[@class='wp-submenu wp-submenu-wrap']//li//a[contains(text(),'Add New')]")
 public WebElement Addnewprop;
 
+@FindBy(xpath="//a[contains(text(),'Features')]")
+public WebElement Feature;
+@FindBy(xpath="//a[contains(text(),'Region')]")
+public WebElement Regionlink;
+
 
 
 public void hoveradmin() {

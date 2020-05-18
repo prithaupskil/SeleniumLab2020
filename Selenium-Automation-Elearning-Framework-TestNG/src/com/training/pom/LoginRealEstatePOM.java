@@ -15,7 +15,7 @@ public class LoginRealEstatePOM {
 	}
 	
 	@FindBy(className="sign-in")
-	private WebElement loginorRegister; 
+	public WebElement loginorRegister; 
 	
 	@FindBy(linkText="Log In")
 	private WebElement login; 
@@ -27,7 +27,7 @@ public class LoginRealEstatePOM {
 	public WebElement password;
 	
 	@FindBy(name="login")
-	private WebElement loginBtn; 
+	public WebElement loginBtn; 
 	
 	public void clickLoginorregister() {
 		this.loginorRegister.click();

@@ -21,6 +21,9 @@ public class EditpropertyPOM {
 		@FindBy(xpath="//p[contains(text(),'Post published.')]")
 		public WebElement postPublished; 
 		
+		@FindBy(xpath="//div[@class='updated notice notice-success is-dismissible']//p")
+		public WebElement publishmessage;
+		
 		
 
 }
